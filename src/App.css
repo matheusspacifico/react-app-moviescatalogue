@@ -13,7 +13,7 @@ body {
     min-height: 100vh;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
     color: #2c3e50;
     font-weight: 600;
@@ -107,4 +107,3 @@ img:hover {
         padding: 10px;
     }
 }
-  
