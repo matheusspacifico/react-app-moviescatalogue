@@ -5,6 +5,7 @@ import Create from './components/Create';
 import Update from './components/Update';
 import Read from './components/Read';
 import Delete from './components/Delete';
+import ErrorPage from './components/ErrorPage';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         <Route path='/update' element={<Update />}></Route>
         <Route path='/read' element={<Read />}></Route>
         <Route path='/delete' element={<Delete />}></Route>
+        <Route path='*' element={<ErrorPage />}></Route>
       </Routes>
     </BrowserRouter>
   );

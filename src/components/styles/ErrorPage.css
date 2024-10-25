@@ -1,0 +1,24 @@
+.error-page {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.error-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 300px;
+}
+
+.error-text h1 {
+    font-size: 3.5em;
+}
+
+.error-page p {
+    font-size: 1.2em;
+}
