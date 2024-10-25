@@ -1,4 +1,4 @@
-.update-page {
+.create-page {
     padding: 20px;
     display: flex;
     flex-direction: row;
@@ -7,7 +7,7 @@
     min-height: 100vh;
 }
 
-.search {
+.modern-form {
     display: flex;
     flex-direction: column;
     width: 100%;

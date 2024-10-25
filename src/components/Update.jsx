@@ -1,19 +1,21 @@
 import { useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import './Update.css';
+import axios from "axios";
+import './styles/Update.css';
 
 function Update() {
   const [id, setId] = useState("");
-  const [movie, setMovie] = useState(null);
   const [name, setName] = useState("");
   const [genre, setGenre] = useState("");
   const [year, setYear] = useState("");
   const [image, setImage] = useState("");
+
+  const [movie, setMovie] = useState(null);
   const navigate = useNavigate();
 
   function handleSearch(e){
     e.preventDefault();
+
     axios.get(`https://6719816c7fc4c5ff8f4d9f11.mockapi.io/movies/${id}`)
       .then((res) => {
         setMovie(res.data);
@@ -27,8 +29,9 @@ function Update() {
       });
   }
 
-  function handleSubmit(e){
+  function handleUpdate(e){
     e.preventDefault();
+    
     axios.put(`https://6719816c7fc4c5ff8f4d9f11.mockapi.io/movies/${id}`, {
       name,
       genre,
@@ -38,13 +41,14 @@ function Update() {
       navigate("/");
     }).catch((err) => {
       console.error(err);
+      alert("An error has occurred while updating! Changes were not made.")
     });
   }
 
   let updateForm = null;
   if (movie != null) {
     updateForm = (
-      <form className="search" onSubmit={handleSubmit}>
+      <form className="modern-form" onSubmit={handleUpdate}>
         <label>Name:</label>
         <input 
           type="text" 
@@ -54,21 +58,24 @@ function Update() {
         />
 
         <label>Genre:</label>
-        <input type="text" 
+        <input
+          type="text" 
           value={genre} 
           onChange={(e) => setGenre(e.target.value)} 
           required 
         />
 
         <label>Year:</label>
-        <input type="number" 
+        <input
+          type="number" 
           value={year} 
           onChange={(e) => setYear(e.target.value)} 
           required 
         />
 
         <label>Image URL (optional):</label>
-        <input type="text" 
+        <input
+          type="text" 
           value={image} 
           onChange={(e) => setImage(e.target.value)} 
         />
@@ -80,7 +87,7 @@ function Update() {
 
   return (
     <div className="update-page">
-      <form className="search" onSubmit={handleSearch}>
+      <form className="modern-form" onSubmit={handleSearch}>
         <h2>Update Movie</h2>
         <label>Enter Movie ID:</label>
         <input
