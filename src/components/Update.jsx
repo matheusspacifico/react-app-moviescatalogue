@@ -25,7 +25,7 @@ function Update() {
         setImage(res.data.image);
       }).catch((err) => {
         console.error(err);
-        alert("ID entered wasn't found!");
+        alert("ID entered was not found!");
       });
   }
 
@@ -96,7 +96,7 @@ function Update() {
           onChange={(e) => setId(e.target.value)}
           required
         />
-        <button type="submit">Search</button>
+        <button type="submit">Update Movie</button>
       </form>
 
       {updateForm}

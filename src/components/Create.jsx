@@ -22,7 +22,7 @@ function Create() {
     }).then(() => {
       navigate("/");
     }).catch((err) => {
-      console.log(err);
+      console.error(err);
       alert("An error has occurred while creating! Movie was not created.");
     });
   }
