@@ -2,13 +2,6 @@
 
 A *Vite* + *React* application for managing movie entries with full CRUD (Create, Read, Update, Delete) functionality. This app is built to interact with a REST API (MockAPI) and allows users to browse, search, update, and view movie details. 
 
-## Table of Contents
-
-- [Features](#features)
-- [Usage](#usage)
-- [Components](#components)
-- [API](#api)
-
 ## Features
 
 - **Create** new movie entries
